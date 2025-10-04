@@ -1,0 +1,17 @@
+[project]
+name = "minicua"
+version = "0.1.0"
+description = "A minimal set up for a CUA agent"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastmcp>=2.12.4",
+    "pillow>=11.3.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project.scripts]
+vnc-mcp-server = "client.mcp-server:main.py"
