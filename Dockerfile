@@ -1,4 +1,6 @@
-FROM docker.1ms.run/python:3.12-alpine
+# For users from China, please use this mirror site.
+# FROM docker.1ms.run/python:3.12-alpine
+FROM python:3.12-alpine
 
 # init ash file (for non-login shells)
 ENV ENV='$HOME/.ashrc'

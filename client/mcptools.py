@@ -5,7 +5,7 @@ from PIL import Image as PILImage
 from typing import List
 from io import BytesIO
 
-mcp = FastMCP("VNCControlServer")
+mcp = FastMCP("MiniCUA-MCP-server")
 
 HOST = "172.17.0.2" # Default docker address
 PORT = 3737 # Default VNC port
@@ -20,7 +20,7 @@ def check_connectivity():
         if (res["status"] != "success"):
             raise Exception(f"Cannot connect to address: {url}")
     except Exception as e:
-        print(str(e))
+        return {"status": "failure", "error": str(e)}
 
 def read_image_as_base64_stream(image: Image, format: str = 'PNG'):
     # Create an in-memory bytes buffer
@@ -128,10 +128,10 @@ def press_key_combinations(keys: List[str]):
     data = {"keys": keys}
     return requests.post(f"{url}/key-combination/", data=data).json()
 
-if __name__ == "__main__":
-    # print("Server starting...", file=sys.stderr)
+def main():
     try:
         check_connectivity()
     except Exception as e:
+        print(f"An error occured: {str(e)}")
         exit(1)
     mcp.run()
