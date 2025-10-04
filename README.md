@@ -7,7 +7,25 @@ This repository includes:
 - A minimal image that includes basic functionalities (browser, terminal, VNC) and an API endpoint
 - An MCP-server script that can be connected to the API endpoint
 
+## Building the image
+
+To pull and run the image, simply run:
+
+```shell
+# Pull the image
+docker pull mhz139/minicua
+
+# Run the image
+docker run --rm -p 5900:5900 -p 6080:6080 --hostname alpine mhz139/minicua
+```
+
+Since this is equipped with a VNC server, you can go to [localhost:6080](http://localhost:6080) to view the server.
+
+In addition, if you have TigerVNC, you can use docker's default address with port 5900 to view it in TigerVNC.
+
 ## Running the server
+
+Before running the server, make sure the image is built and run first.
 
 To run the tools server, the simplest way is to install `uv` and then use `uvx` to run the server directly:
 ```shell
