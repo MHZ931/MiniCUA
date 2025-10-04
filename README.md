@@ -68,4 +68,8 @@ Or you can add the server into your favorite LLM workflows:
 - fastmcp>=2.12.4
 - pillow>=11.3.0
 
+## TODO
+
+- [] Demo video
+
 Special Thanks to [rwildcat/docker_alpine-vnc](https://github.com/rwildcat/docker_alpine-vnc) for offering an awesome barebone VNC connected Linux image to work with.
