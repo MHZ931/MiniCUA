@@ -70,6 +70,6 @@ Or you can add the server into your favorite LLM workflows:
 
 ## TODO
 
-- [] Demo video
+- [ ] Demo video
 
 Special Thanks to [rwildcat/docker_alpine-vnc](https://github.com/rwildcat/docker_alpine-vnc) for offering an awesome barebone VNC connected Linux image to work with.
