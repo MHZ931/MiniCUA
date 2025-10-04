@@ -7,6 +7,8 @@ This repository includes:
 - A minimal image that includes basic functionalities (browser, terminal, VNC) and an API endpoint
 - An MCP-server script that can be connected to the API endpoint
 
+All you need to do is to pull the docker image and then plug the tools server into your favorite LLM agent, and you are good to go!
+
 ## Pulling and running the image
 
 To pull and run the image, simply run:
