@@ -48,7 +48,7 @@ To run the tools server, the simplest way is to install `uv` and then use `uvx` 
 curl -LsSf https://astral.sh/uv/install.sh | sh
 
 # Run the server
-uvx minicua-mcp-server
+uvx --from minicua minicua-mcp-server
 ```
 
 Or you can add the server into your favorite LLM workflows:
@@ -57,7 +57,7 @@ Or you can add the server into your favorite LLM workflows:
     "minicua-mcp-server": {
       "command": "uvx",
       "args": [
-        "minicua-mcp-server"
+        "--from", "minicua", "minicua-mcp-server"
       ]
     }
 ```

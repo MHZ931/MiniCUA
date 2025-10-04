@@ -12,6 +12,7 @@ dependencies = [
 author = [
     {name = "Minghan Zhang", email = "minghan139.zhang@gmail.com"},
 ]
+
 [tool.hatch.build.targets.wheel]
 packages = ["client"]
 

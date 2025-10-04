@@ -1,4 +1,5 @@
-from fastmcp import FastMCP, Image
+from fastmcp import FastMCP
+from fastmcp.utilities.types import Image
 import requests
 import base64
 from PIL import Image as PILImage
