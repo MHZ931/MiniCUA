@@ -7,7 +7,7 @@ This repository includes:
 - A minimal image that includes basic functionalities (browser, terminal, VNC) and an API endpoint
 - An MCP-server script that can be connected to the API endpoint
 
-## Building the image
+## Pulling and running the image
 
 To pull and run the image, simply run:
 
@@ -22,6 +22,19 @@ docker run --rm -p 5900:5900 -p 6080:6080 --hostname alpine mhz139/minicua
 Since this is equipped with a VNC server, you can go to [localhost:6080](http://localhost:6080) to view the server.
 
 In addition, if you have TigerVNC, you can use docker's default address with port 5900 to view it in TigerVNC.
+
+
+## Building the image 
+
+If you would like to customize your image, you can clone the repository and then build the `Dockerfile` directly.
+
+```shell
+# Clone the repository
+git clone https://github.com/MHZ931/MiniCUA.git
+
+# Build the image
+docker build -t mhz139/minicua .
+```
 
 ## Running the server
 
